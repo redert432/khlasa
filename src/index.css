@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-theme-bg: #0A0A0B;
+  --color-theme-surface-lg: #111112;
+  --color-theme-surface-sm: #1C1C1E;
+  --color-theme-accent: #C5A47E;
+  --color-theme-accent-dark: #8E795E;
+  --color-theme-text-primary: #F2F2F2;
+  --color-theme-text-secondary: #A1A1AA;
+  --color-theme-border: #27272A;
+}
+
+:root[data-theme='light'] {
+  --color-theme-bg: #F9FAFB;
+  --color-theme-surface-lg: #FFFFFF;
+  --color-theme-surface-sm: #F3F4F6;
+  --color-theme-accent: #8E795E;
+  --color-theme-accent-dark: #6B5B47;
+  --color-theme-text-primary: #111827;
+  --color-theme-text-secondary: #4B5563;
+  --color-theme-border: #E5E7EB;
+}
+
+body {
+  background-color: var(--color-theme-bg);
+  color: var(--color-theme-text-primary);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.atmosphere {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: 
+    radial-gradient(circle at 0% 0%, var(--color-theme-accent) 0%, transparent 40%),
+    radial-gradient(circle at 100% 100%, var(--color-theme-surface-sm) 0%, transparent 40%);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.glass-card {
+  background: color-mix(in srgb, var(--color-theme-surface-lg), transparent 10%);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--color-theme-border);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  color: var(--color-theme-accent);
+}

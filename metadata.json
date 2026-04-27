@@ -1,0 +1,8 @@
+{
+  "name": "Khulasa (خُلاصة) - AI Meeting Assistant",
+  "description": "Smart meeting assistant that records, transcribes, and extracts intelligent summaries and action items using AI.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": []
+}
